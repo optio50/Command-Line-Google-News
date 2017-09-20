@@ -36,4 +36,4 @@ Kenya's judges who nullified election face 'savage' threats - Washington Post : 
  
 Brazil's police confirms death of British kayaker in Amazon - New York Daily News : http://tinyurl.com/yckj3e83
 
-![ScreenShot](https://raw.github.com/optio50/Command-Line-Google-News/master/Screenshot from 2017-09-19 22-07-53.png)
+![ScreenShot](https://github.com/optio50/Command-Line-Google-News/blob/master/Screenshot%20from%202017-09-19%2022-07-53.png)
