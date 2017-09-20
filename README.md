@@ -35,3 +35,5 @@ WWI submarine wreck containing 23 bodies found in Belgian waters - New York Dail
 Kenya's judges who nullified election face 'savage' threats - Washington Post : http://tinyurl.com/ybcdwpxz
  
 Brazil's police confirms death of British kayaker in Amazon - New York Daily News : http://tinyurl.com/yckj3e83
+
+![ScreenShot](https://raw.github.com/optio50/Command-Line-Google-News/master/Screenshot from 2017-09-19 22-07-53.png)
