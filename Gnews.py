@@ -4,37 +4,7 @@
 # Author Hemanth.HM
 # Site : www.h3manth.com
 # Licensed under GNU GPL Version 3
-'''
-try:
-    import pip
-except ImportError:
-	print("Pip Not Installed. Install With sudo apt-get install python-pip");
-	exit();
 
-from contextlib import contextmanager
-import sys, os
-
-@contextmanager
-def suppress_stdout():
-    with open(os.devnull, "w") as devnull:
-        old_stdout = sys.stdout
-        sys.stdout = devnull
-        try:
-            yield
-        finally:
-            sys.stdout = old_stdout
-
-import pip
-
-required_pkgs = ['feedparser', 'tinyurl', 'colorama' ]
-installed_pkgs = [pkg.key for pkg in pip.get_installed_distributions()]
-
-for package in required_pkgs:
-    if package not in installed_pkgs:
-        with suppress_stdout():
-            pip.main(['install', package])
-
-'''
 import feedparser
 import pyshorteners
 #import tinyurl
