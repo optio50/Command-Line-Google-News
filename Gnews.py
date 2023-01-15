@@ -1,10 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Google News
 # gnews.py
 # Author Hemanth.HM
 # Site : www.h3manth.com
 # Licensed under GNU GPL Version 3
-
+'''
 try:
     import pip
 except ImportError:
@@ -34,9 +34,10 @@ for package in required_pkgs:
         with suppress_stdout():
             pip.main(['install', package])
 
-
+'''
 import feedparser
-import tinyurl
+import pyshorteners
+#import tinyurl
 import colorama
 from colorama import Fore, Back, Style
 
@@ -53,7 +54,7 @@ class Googlenews:
 			news_type = 1
 			return news_type
 		except ValueError:
-			print 'Invalid input, please select a number for the list'
+			print('Invalid input, please select a number for the list')
 
 	def get_feed(self):
 		""" Returns the feed type based on the users input """
@@ -82,11 +83,13 @@ class Googlenews:
 		""" Returns the top ten news of the selected section """
 		feed_url = self.get_feed()
 		feed_data = feedparser.parse(feed_url)
-		print " "
+		print("")
+		type_tiny = pyshorteners.Shortener()
 		for data in feed_data["items"]:
-			tiny_url = tinyurl.create_one(data["link"])
+			tiny_url = type_tiny.tinyurl.short(data["link"])
+			#tiny_url = tinyurl.create_one(data["link"])
 			print('\033[33m' + data["title"] + " : " + Style.RESET_ALL + tiny_url)
-			print " "
+			print("")
 
 def main():
 	""" The main block where all the action happens """
